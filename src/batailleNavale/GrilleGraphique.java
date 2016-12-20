@@ -22,8 +22,11 @@ public class GrilleGraphique extends JPanel implements ActionListener {
 
 	private CaseClickListener listener;
 	
+	
+	
 	public GrilleGraphique() {
-		this(10);
+		//Besoin du constructeur vide mais pas du this(10), sinon créer une grille de tir fixe 
+		//		this(10);
 	}
 
 	/**
@@ -87,6 +90,7 @@ public class GrilleGraphique extends JPanel implements ActionListener {
 	 *            la couleur de la case
 	 */
 	public void colorie(Coordonnee debut, Coordonnee fin, Color color) {
+		System.out.println("----------------what is debut ligne"+debut.getLigne()+ " >  fin ligne "+fin.getLigne()+ " > "+debut.getColonne() +" > "+ fin.getColonne());
 		for (int i = debut.getLigne(); i <= fin.getLigne(); i++) {
 			for (int j = debut.getColonne(); j <= fin.getColonne(); j++) {
 				cases[i][j].setBackground(color);

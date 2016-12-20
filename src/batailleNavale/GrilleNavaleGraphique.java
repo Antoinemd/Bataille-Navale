@@ -33,10 +33,10 @@ public class GrilleNavaleGraphique extends GrilleNavale {
 	public boolean recoitTir(Coordonnee c) {
 		if(super.recoitTir(c)) {
 			if(this.estTouche(c)){
-				this.grille.colorie(c, Color.red);
+				this.grille.colorie(c, Color.RED);
 			}
 			else{
-				this.grille.colorie(c, Color.blue);
+				this.grille.colorie(c, Color.BLUE);
 				}
 			return true;
 		}

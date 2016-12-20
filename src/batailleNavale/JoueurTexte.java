@@ -32,7 +32,7 @@ public class JoueurTexte extends Joueur {
 				System.out.println(this.getNom() + " tire à l'eau en " + c );
 			} else {
 				System.out.println("état: " + etat);
-			}
+		}
 		
 	}
 	
@@ -62,28 +62,28 @@ public class JoueurTexte extends Joueur {
 		
 	}
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
-		Coordonnee c1 = new Coordonnee("B2");
-		Navire n1 = new Navire(c1, 3, false);
-		GrilleNavale g1 = new GrilleNavale(5,1);
-		
-		g1.ajouteNavire(n1);
-		System.out.println("Affichage de J1 \n" + g1 + "\n");
-		
-		
-		int []taillesNavires = {3};
-		Navire n2 = new Navire(c1, 3, false);
-		GrilleNavale g2 = new GrilleNavale(5, taillesNavires);
-		System.out.println("Affichage de J2 \n" + g2 + "\n");
-		
-		JoueurTexte j1 = new JoueurTexte(g1, "Bro");
-		JoueurTexte j2 = new JoueurTexte(g2, "Grammeur");
-		
-		j1.jouerAvec(j2);
-		j1.debutAttaque();
-		
-	}
+//	public static void main(String[] args) {
+//		// TODO Auto-generated method stub
+//		
+//		Coordonnee c1 = new Coordonnee("B2");
+//		Navire n1 = new Navire(c1, 3, false);
+//		GrilleNavale g1 = new GrilleNavale(5,1);
+//		
+//		g1.ajouteNavire(n1);
+//		System.out.println("Affichage de J1 \n" + g1 + "\n");
+//		
+//		
+//		int []taillesNavires = {3};
+//		Navire n2 = new Navire(c1, 3, false);
+//		GrilleNavale g2 = new GrilleNavale(5, taillesNavires);
+//		System.out.println("Affichage de J2 \n" + g2 + "\n");
+//		
+//		JoueurTexte j1 = new JoueurTexte(g1, "Bro");
+//		JoueurTexte j2 = new JoueurTexte(g2, "Grammeur");
+//		
+//		j1.jouerAvec(j2);
+//		j1.debutAttaque();
+//		
+//	}
 
 }

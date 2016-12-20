@@ -1,9 +1,9 @@
 package batailleNavale;
 
-import java.awt.BorderLayout;
+import java.awt.*;
+import javax.swing.*;
 import java.awt.EventQueue;
 
-import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.GridLayout;
@@ -18,19 +18,23 @@ public class FenetreJoueur extends JFrame {
 	private GrilleNavaleGraphique grilleDefense;
 	
 	public FenetreJoueur() { 
-		this("Nom du joueur", 10);
+//		this("Nom du joueur", 8);
+		super();
 	}
 	
 	public FenetreJoueur(String nom,int taille) {
 		
-		int[] navires = { 4, 4, 3};
+//		int[] navires = { 4, 4, 3};
 		grilleDefense = new GrilleNavaleGraphique(taille);
-		grilleDefense.placementAuto(navires);
+//		grilleDefense.placementAuto(navires);
 		GrilleGraphique g = grilleDefense.getGrilleGraphique();
 
 		getContentPane().setLayout(new GridLayout(1, 0, 0, 0));
 
-		grilleTirs = new GrilleGraphique();
+		// probleme dans le constructeur taille grilleTir != taille grilleDefense
+		grilleTirs = new GrilleGraphique(taille);
+		
+		
 		grilleTirs.setBorder(new TitledBorder(null, "Grille de tir", TitledBorder.LEADING, TitledBorder.TOP, null, null));
 		getContentPane().add(grilleTirs);
 
@@ -57,8 +61,13 @@ public class FenetreJoueur extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					FenetreJoueur frame = new FenetreJoueur();
+					FenetreJoueur frame = new FenetreJoueur("A ", 10);
 					frame.setVisible(true);
+					
+					// Auto-size la fenêtre en fonction de la disposition des éléments
+					frame.pack();
+					frame.setSize(600, 300);
+//					frame.dispatchEvent(new WindowEvent(myFrame, WindowEvent.WINDOW_CLOSING));
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
