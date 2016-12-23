@@ -85,19 +85,26 @@ public class JoueurGraphique extends Joueur implements CaseClickListener {
 	}
 	
 
-//	public static void main(String[] args) {
-		// TODO a vérifier
+	public static void main(String[] args) {
+//		// TODO a vérifier
+//		
+		int[] navires = { 4, 4, 3};
+		String nom = "Bro";
+		String nom2 = "Gramme";
 		
-//		int[] navires = { 4, 4, 3};
-//		String nom = "Bro";
-//		
-//		GrilleNavaleGraphique grille1 = new GrilleNavaleGraphique(10);
-//		GrilleGraphique grilleGraph1 = new GrilleGraphique();
-//		
-//		JoueurGraphique j1 = new JoueurGraphique(grille1, grilleGraph1, nom);
-				
+		GrilleNavaleGraphique grille1 = new GrilleNavaleGraphique(10);
+		GrilleNavaleGraphique grille2 = new GrilleNavaleGraphique(10);
+		
+		GrilleGraphique grilleGraph1 = new GrilleGraphique();
+		GrilleGraphique grilleGraph2 = new GrilleGraphique();
+		
+		JoueurGraphique j1 = new JoueurGraphique(grille1, grilleGraph1, nom);
+		JoueurGraphique j2 = new JoueurGraphique(grille2, grilleGraph2, nom2);		
+		
+		j1.jouerAvec(j2);
+		j1.debutAttaque();
 				
 
-//	}
+	}
 
 }
