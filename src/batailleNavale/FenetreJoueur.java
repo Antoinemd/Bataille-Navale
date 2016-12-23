@@ -57,23 +57,24 @@ public class FenetreJoueur extends JFrame {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					FenetreJoueur frame = new FenetreJoueur("A ", 10);
-					frame.setVisible(true);
-					
-					// Auto-size la fenêtre en fonction de la disposition des éléments
-					frame.pack();
-					frame.setSize(600, 300);
-//					frame.dispatchEvent(new WindowEvent(myFrame, WindowEvent.WINDOW_CLOSING));
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+//	public static void main(String[] args) {
+//		EventQueue.invokeLater(new Runnable() {
+//			public void run() {
+//				try {
+//					
+//					FenetreJoueur frame = new FenetreJoueur("A ", 10);
+//					frame.setVisible(true);
+//					
+//					// Auto-size la fenêtre en fonction de la disposition des éléments
+//					frame.pack();
+//					frame.setSize(600, 300);
+////					frame.dispatchEvent(new WindowEvent(myFrame, WindowEvent.WINDOW_CLOSING));
+//				} catch (Exception e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		});
+//	}
 
 	/**
 	 * Create the frame.
